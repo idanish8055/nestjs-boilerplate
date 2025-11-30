@@ -1,0 +1,13 @@
+{{
+  //pre request script
+  const date = new Date();
+  exports.startDate = date.toString();
+  exports.endDate = date.toString();
+}}
+
+GET http://localhost:3000/posts/ 
+    ?startDate={{startDate}}
+    &endDate={{endDate}}
+    &limit=10
+    &page=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsImVtYWlsIjoibWFya0Bkb2UuY29tIiwiaWF0IjoxNzYyNzk3MDQ5LCJleHAiOjE3NjI4MDA2NDksImF1ZCI6ImxvY2FsaG9zdDozMDAwIiwiaXNzIjoibG9jYWxob3N0OjMwMDAifQ._B8sGJna1BFLh8s7VeOE4kcJFfG8fSMQZB1hWXJK_kA
